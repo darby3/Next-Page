@@ -14,7 +14,6 @@
   "scripts": {
     "js": "browserify js/app.js -t babelify -o build/js/app.js",
     "sass": "node-sass sass/main.scss build/css/styles.css",
-    "html": "cp -r html/ build/",
     "clean": "rm -r build/",
     "preview": "live-server --open=build/ --watch=build/ --ignore=**/*tmp-browserify*",
     "build": "assemble",

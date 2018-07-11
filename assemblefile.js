@@ -9,8 +9,6 @@ app.partials('templates/partials/**/*.hbs');
 
 app.option('layout', 'main');
 
-console.dir(app);
-
 app.task('default', function() {
   app.pages('pages/*.hbs');
   return app.toStream('pages')
