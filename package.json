@@ -13,7 +13,7 @@
     "sass": "node-sass sass/main.scss build/css/styles.css",
     "html": "cp -r html/ build/",
     "clean": "rm -r build/",
-    "preview": "live-server --open=build/",
+    "preview": "live-server --open=build/ --watch=build/ --ignore=**/*tmp-browserify*",
     "watch": "npm-watch",
     "predev": "mkdir -p build && run-p sass js html",
     "dev": "run-p preview watch"
