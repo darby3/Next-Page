@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "watches": {
+  "watch": {
     "sass": "sass/**",
     "js": "js/**",
     "html": "html/**"
@@ -14,7 +14,7 @@
     "html": "cp -r html/ build/",
     "clean": "rm -r build/",
     "preview": "live-server --open=build/",
-    "watch": "rerun-script",
+    "watch": "npm-watch",
     "predev": "mkdir -p build && run-p sass js html",
     "dev": "run-p preview watch"
   },
@@ -28,6 +28,6 @@
     "live-server": "^1.2.0",
     "node-sass": "^4.9.2",
     "npm-run-all": "^4.1.3",
-    "rerun-script": "^0.6.0"
+    "npm-watch": "^0.3.0"
   }
 }

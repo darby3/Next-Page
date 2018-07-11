@@ -16,7 +16,8 @@
         var z = x(y);
         var q = x(25);
 
-        console.log(z);
+        console.log('z = ', z);
+        console.log('q = ', q);
 
     });
 
