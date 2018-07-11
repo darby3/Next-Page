@@ -16,7 +16,7 @@ app.task('default', function() {
   return app.toStream('pages')
     .pipe(app.renderFile())
     .pipe(extname())
-    .pipe(app.dest('dist'));
+    .pipe(app.dest('build'));
 });
 
 module.exports = app;

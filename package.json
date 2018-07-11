@@ -6,7 +6,10 @@
   "watch": {
     "sass": "sass/**",
     "js": "js/**",
-    "html": "html/**"
+    "build": {
+      "patterns": ["pages","templates"],
+      "extensions": "hbs"
+    }
   },
   "scripts": {
     "js": "browserify js/app.js -t babelify -o build/js/app.js",
@@ -16,7 +19,7 @@
     "preview": "live-server --open=build/ --watch=build/ --ignore=**/*tmp-browserify*",
     "build": "assemble",
     "watch": "npm-watch",
-    "predev": "mkdir -p build && run-p sass js html",
+    "predev": "mkdir -p build && run-p sass js build",
     "dev": "run-p preview watch"
   },
   "author": "",
