@@ -1,0 +1,14 @@
+@import "global/global-variables";
+
+.main {
+  margin: $margin;
+  padding: $padding;
+  background: $blue;
+  color: #ffffff;
+
+  a {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 50px;
+  }
+}
