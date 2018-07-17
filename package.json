@@ -23,7 +23,7 @@
     "sass": "node-sass sass/main.scss build/css/styles.css",
     "img": "cp -r images/ build/img/",
     "clean": "rm -r build/",
-    "preview": "live-server --no-browser --open=build/ --watch=build/ --ignore=**/*tmp-browserify*",
+    "preview": "live-server --no-browser --open=build/ --watch=build/ --mount=/:build/ --ignore=**/*tmp-browserify*",
     "build": "assemble",
     "watch": "npm-watch",
     "predev": "mkdir -p build && run-p sass js img build",
