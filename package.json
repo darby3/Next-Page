@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "nodemonConfig": {
+    "events": {
+      "crash": "osascript -e 'display notification \"Something Broke\" with title \"npmScriptsStarter\"'"
+    }
+  },
   "watch": {
     "sass": {
       "patterns": ["sass", "scss"],
