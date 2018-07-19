@@ -5,6 +5,7 @@
   "main": "index.js",
   "nodemonConfig": {
     "events": {
+      "start": "nodeMonNowIs=$(date +\"%T\") && echo Current Time: $nodeMonNowIs",
       "crash": "osascript -e 'display notification \"Something Broke\" with title \"npmScriptsStarter\"'"
     }
   },
