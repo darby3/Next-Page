@@ -36,12 +36,14 @@
     }
   },
   "scripts": {
-    "js": "browserify js/app.js -t babelify -o build/js/app.js",
     "sass": "node-sass sass/main.scss build/css/styles.css",
+    "js": "browserify js/app.js -t babelify -o build/js/app.js",
     "img": "cp -r images/ build/img/",
     "clean": "rm -r build/",
     "preview": "live-server --no-browser --open=build/ --watch=build/ --mount=/:build/ --ignore=**/*tmp-browserify*",
-    "build": "assemble",
+    "build": "run-p myEleventy:standard",
+    "myEleventy:debug": "DEBUG=Eleventy* npx eleventy",
+    "myEleventy:standard": "npx eleventy",
     "watch": "npm-watch",
     "predev": "mkdir -p build && run-p sass js img build",
     "dev": "run-p preview watch"
@@ -50,7 +52,6 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "assemble": "^0.24.3",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babelify": "^10.0.0",
