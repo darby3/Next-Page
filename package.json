@@ -37,7 +37,7 @@
   },
   "scripts": {
     "sass": "node-sass sass/main.scss build/css/styles.css",
-    "js": "browserify js/app.js -t babelify -o build/js/app.js",
+    "js": "browserify js/app.js -t babelify -o build/js/app.js --debug",
     "img": "cp -r images/ build/img/",
     "clean": "rm -r build/",
     "preview": "live-server --no-browser --open=build/ --watch=build/ --mount=/:build/ --ignore=**/*tmp-browserify*",
@@ -51,9 +51,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
     "@babel/core": "^7.7.2",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
+    "@babel/preset-env": "^7.7.7",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "gulp-extname": "^0.2.2",
