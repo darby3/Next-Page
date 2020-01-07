@@ -1,8 +1,10 @@
-{
-  "presets": [["@babel/env",
+const presets = [
+  [
+    "@babel/env",
     {
-      "targets": {
-        "chrome": "67"
-      }
-    }]]
-}
+      targets: "> 0.25%, not dead"
+    },
+  ],
+];
+
+module.exports = { presets };
