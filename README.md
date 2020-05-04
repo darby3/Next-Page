@@ -21,3 +21,7 @@ There's plenty else to be done here but [there's probably other people doing thi
 ## How this works, if it works
 
 So you start a project and ```npm install``` it and then you ```npm run dev``` it and you should get a live server with automatic compilation of templates, Sass files, and JavaScript files all output to the build folder. As of right now it's all in debug mode until I get around to doing something final with it at which point I'll need to figure out how to prod mode all of it.
+
+## How to use
+
+```npm install``` and then ```npm run dev``` to get a live-server and html/css/js compilation going. (Results are output to ```./build```.) ```npm prod``` runs basic prod-ready css/js minification, (outputting the results to the same ```./build``` directory).
