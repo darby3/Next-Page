@@ -41,6 +41,7 @@
     "js": "browserify js/app.js -t babelify -o build/js/app.js --debug",
     "js:production": "browserify -p tinyify js/app.js -t babelify -o build/js/app.js",
     "img": "cp -r images/ build/img/",
+    "imgWebp": "find ./build/img -type f -name '*.jpg' -exec sh -c 'cwebp -q 80 $1 -o \"${1%.png}.webp\"' _ {} \\;",
     "clean": "rm -r build/",
     "preview": "live-server --no-browser --open=build/ --watch=build/ --mount=/:build/ --ignore=**/*tmp-browserify*",
     "build": "run-p myEleventy:standard",

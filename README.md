@@ -25,3 +25,5 @@ So you start a project and ```npm install``` it and then you ```npm run dev``` i
 ## How to use
 
 ```npm install``` and then ```npm run dev``` to get a live-server and html/css/js compilation going. (Results are output to ```./build```.) ```npm prod``` runs basic prod-ready css/js minification, (outputting the results to the same ```./build``` directory).
+
+Note: ```npm run imgWebp``` is provided as a convenience, and requires [webp be available on your system](https://formulae.brew.sh/formula/webp).
