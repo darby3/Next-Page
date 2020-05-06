@@ -1,6 +1,6 @@
 # Next Page
 
-A starting point for basic HTML/CSS/JS projects.
+A starting point for your next basic HTML/CSS/JS page. (Yeah, you see what I did there.)
 
 ## How to use
 
@@ -18,7 +18,7 @@ I am 99% in debt to Paul C Pederson's [Using NPM as a Task Runner](http://paulcp
 
 I work in OSX land all the time, so I do non-platform-agnostic things here and there. I'll fix them if I move to another OS at some point and find out they break.
 
-This repository used to be called "npm Scripts Starter." Then I decided to name it something more fun.
+This repository used to be called "npm Scripts Starter." Then I decided to name it something more fun. But not too fun.
 
 In January 2020 I swapped out Assemble for [11ty](https://www.11ty.dev/). Everything seems to work but then I haven't done much of anything too crazy with it yet. I think right now calling for a layout is required in the front matter of templates, but I think in another project I actually figured out how to set default layouts, so some day I might or should go back and apply that knowledge here. [There are also certainly other people doing this sort of thing better than I am](https://www.11ty.dev/docs/starter/) so it's worth shopping around a bit. I tend to like things basic, though.
 
