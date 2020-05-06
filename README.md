@@ -1,29 +1,25 @@
-# npm Scripts Starter
+# Next Page
 
-The world is on fire but I'm finally getting around to learning how to set up and use npm scripts instead of Grunt or Gulp. So that's fun.
+A starting point for your next basic HTML/CSS/JS page. (Yeah, you see what I did there.)
+
+## How to use
+
+```npm install``` and then ```npm run dev``` to get a live-server and html/css/js compilation going. Results are output to ```./build```. ```npm prod``` runs basic prod-ready css/js minification, (outputting the results to the same ```./build``` directory).
+
+Note: ```npm run imgWebp``` is provided as a convenience, and requires [webp be available on your system](https://formulae.brew.sh/formula/webp).
+
+## Background
+
+I used to use Grunt for this sort of thing. Then I set this up as a way to learn how to use npm scripts directly, instead. Then I just started using it for stuff.
 
 I am 99% in debt to Paul C Pederson's [Using NPM as a Task Runner](http://paulcpederson.com/articles/npm-run/) for helping me get past the "oh, wait, I get it now" hump.
-
-This is basically a rough scaffolding for basic html/css/js projects and will probably wind up over-engineered as I figure out fun but pointless stuff I can do with this.
 
 ## Worth noting
 
 I work in OSX land all the time, so I do non-platform-agnostic things here and there. I'll fix them if I move to another OS at some point and find out they break.
 
-## January 2020 Update
+This repository used to be called "npm Scripts Starter." Then I decided to name it something more fun. But not too fun.
 
-The world is literally on fire and I'm out here switching from Assemble to [11ty](https://www.11ty.dev/). In theory this is a pretty easy transition, though it requires a slight change or two to the front matter of templates (calling for a layout is required, as I can't seem to find an option for setting a default layout). I've kept basically everything else separate from 11ty, though, and, aside from slightly updating the Browserify/Babelify flow, that stuff should all work the same.
+In January 2020 I swapped out Assemble for [11ty](https://www.11ty.dev/). Everything seems to work but then I haven't done much of anything too crazy with it yet. I think right now calling for a layout is required in the front matter of templates, but I think in another project I actually figured out how to set default layouts, so some day I might or should go back and apply that knowledge here. [There are also certainly other people doing this sort of thing better than I am](https://www.11ty.dev/docs/starter/) so it's worth shopping around a bit. I tend to like things basic, though.
 
-But it might not work, so, who knows.
-
-There's plenty else to be done here but [there's probably other people doing this better than me](https://www.11ty.dev/docs/starter/) so it's worth shopping around a bit. This is just what's worked for me and made sense to me over time.
-
-## How this works, if it works
-
-So you start a project and ```npm install``` it and then you ```npm run dev``` it and you should get a live server with automatic compilation of templates, Sass files, and JavaScript files all output to the build folder. As of right now it's all in debug mode until I get around to doing something final with it at which point I'll need to figure out how to prod mode all of it.
-
-## How to use
-
-```npm install``` and then ```npm run dev``` to get a live-server and html/css/js compilation going. (Results are output to ```./build```.) ```npm prod``` runs basic prod-ready css/js minification, (outputting the results to the same ```./build``` directory).
-
-Note: ```npm run imgWebp``` is provided as a convenience, and requires [webp be available on your system](https://formulae.brew.sh/formula/webp).
+Also, I've definitely used this (I think?) on Netlify; I think you just need to point at the ```prod``` script. But I'm also fairly sure I haven't actually used image files on Netlify yet, now that I think about it. I should figure that out sometime.
