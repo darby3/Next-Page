@@ -8,13 +8,24 @@ module.exports = function(eleventyConfig) {
     return `${data}`;
   });
 
+  // Copy assets.
+  eleventyConfig.addPassthroughCopy("src/site/images");
+  eleventyConfig.addPassthroughCopy("src/site/assets");
+  eleventyConfig.addPassthroughCopy("src/site/assets");
+
+  // Need to manually add watch targets? The CSS wasn't actually
+  // copying/reloading without this.
+  // TODO: Maybe instead of having 11ty copy assets into place, I should just
+  //       have my watch process do it, instead?
+  eleventyConfig.setUseGitIgnore(false);
+  eleventyConfig.addWatchTarget("src/site/assets");
+
   // Return Config object.
   return {
     dir: {
-      input: "pages",
-      includes: "../templates/partials",
-      layouts: "../templates/layouts",
-      output: "./build"
+      input: "src/site",
+      output: "./_site",
+      layouts: "_layouts"
     }
   };
 };
