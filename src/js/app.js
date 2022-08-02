@@ -7,7 +7,7 @@
         console.log("Hello from the main app file");
 
         // Requires and module initializations
-        var hiThere = require("./modules/helloThere");
+        const hiThere = require("./modules/helloThere");
         hiThere();
 
         // Image lazy loading.
