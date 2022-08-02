@@ -1,6 +1,10 @@
 // Say hello! A tiny module!
-var helloWorld = function() {
-  console.log("Hello from inside a module");
+function helloWorld(name = 'nobody') {
+  console.log(`Hello to ${name}, from inside an ES module!`);
 };
 
-module.exports = helloWorld;
+function goodbyeWorld(name = 'nobody') {
+  console.log(`Goodbye to ${name}, from inside an ES module!`);
+}
+
+export {helloWorld, goodbyeWorld};
