@@ -11,7 +11,9 @@ module.exports = function(eleventyConfig) {
   // Copy assets.
   eleventyConfig.addPassthroughCopy("src/site/images");
   eleventyConfig.addPassthroughCopy("src/site/assets");
-  eleventyConfig.addPassthroughCopy("src/site/assets");
+  eleventyConfig.addPassthroughCopy({
+    "src/site/favico": "/"
+  });
 
   // Need to manually add watch targets? The CSS wasn't actually
   // copying/reloading without this.

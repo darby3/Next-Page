@@ -1,14 +1,15 @@
-@import "global/global-variables";
+@import "global/variables";
 
-.main {
-  margin: $margin;
-  padding: $padding;
-  background: $blue;
-  color: #ffffff;
+body {
+  margin: var(--outer-margin);
+  background-color: darkslategray;
+  color: lightcyan;;
 
-  a {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: calc(100vh - 2 * var(--outer-margin));
+
+  main {
+    flex-grow: 1;
   }
 }
