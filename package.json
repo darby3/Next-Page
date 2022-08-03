@@ -22,7 +22,7 @@
   "scripts": {
     "sass": "node-sass src/sass/main.scss src/site/assets/styles.css",
     "sass:prod": "node-sass --output-style=compressed src/sass/main.scss src/site/assets/styles.css",
-    "js": "esbuild src/js/app.js --bundle --sourcemap --outfile=src/site/assets/app.js",
+    "js": "esbuild src/js/app.js --bundle --sourcemap  --minify --outfile=src/site/assets/app.js",
     "js:prod": "esbuild src/js/app.js --bundle --minify --outfile=src/site/assets/app.js",
     "clean": "rm -r _site/",
     "build:dev": "npx @11ty/eleventy --serve --incremental",

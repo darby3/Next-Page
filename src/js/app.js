@@ -1,5 +1,6 @@
 // main scripts
 import * as hello from './modules/helloThere.js';
+import {goodMorning, goodEvening, goodAfternoon} from "./modules/messages";
 
 // Let's get this party started.
 console.log("Hello from the main app file.");
@@ -7,12 +8,8 @@ console.log("Hello from the main app file.");
 // Requires and module initializations
 hello.helloWorld("NextPage User");
 
-// Image lazy loading.
-// var Blazy = require("blazy");
-// const blazyObj = new Blazy({
-//     selector: '.blazy',
-//     offset: 999
-// });
+goodMorning("lively person");
+goodAfternoon("sleepy person");
 
 // uhm.js
 const y = 9;
