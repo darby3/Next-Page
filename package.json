@@ -22,8 +22,8 @@
   "scripts": {
     "sass": "node-sass src/sass/main.scss src/site/assets/styles.css",
     "sass:prod": "node-sass --output-style=compressed src/sass/main.scss src/site/assets/styles.css",
-    "js": "browserify src/js/app.js -t babelify -o src/site/assets/app.js --debug",
-    "js:prod": "browserify -p tinyify src/js/app.js -t babelify -o src/site/assets/app.js",
+    "js": "esbuild src/js/app.js --bundle --sourcemap  --minify --outfile=src/site/assets/app.js",
+    "js:prod": "esbuild src/js/app.js --bundle --minify --outfile=src/site/assets/app.js",
     "clean": "rm -r _site/",
     "build:dev": "npx @11ty/eleventy --serve --incremental",
     "build:debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
@@ -37,15 +37,11 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "@babel/core": "^7.18.9",
-    "@babel/preset-env": "^7.18.9",
-    "babelify": "^10.0.0",
-    "browserify": "^17.0.0",
     "gulp-extname": "^0.2.2",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "npm-watch": "^0.11.0",
-    "tinyify": "^3.1.0"
+    "esbuild": "^0.14.51"
   },
   "dependencies": {
     "blazy": "^1.8.2"
