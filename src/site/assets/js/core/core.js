@@ -1,6 +1,6 @@
 // main scripts
 import * as hello from './modules/helloThere.js';
-import {goodMorning, goodEvening, goodAfternoon} from "./modules/messages";
+import {goodMorning, goodEvening, goodAfternoon} from "./modules/messages.js";
 
 // Let's get this party started.
 console.log("Hello from the main app file.");
@@ -19,4 +19,3 @@ let q = x(25);
 
 console.log('z = ', z);
 console.log('q = ', q);
-
