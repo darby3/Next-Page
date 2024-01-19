@@ -1,6 +1,6 @@
 {
   "name": "npmscriptsstarter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "nodemonConfig": {
@@ -9,38 +9,17 @@
       "crash": "osascript -e 'display notification \"Something Broke\" with title \"npmScriptsStarter\"'"
     }
   },
-  "watch": {
-    "sass": {
-      "patterns": [
-        "src/sass",
-        "src/scss"
-      ],
-      "extensions": "scss"
-    },
-    "js": "src/js/**"
-  },
   "scripts": {
-    "sass": "node-sass src/sass/main.scss src/site/assets/styles.css",
-    "sass:prod": "node-sass --output-style=compressed src/sass/main.scss src/site/assets/styles.css",
-    "js": "esbuild src/js/app.js --bundle --sourcemap  --minify --outfile=src/site/assets/app.js",
-    "js:prod": "esbuild src/js/app.js --bundle --minify --outfile=src/site/assets/app.js",
     "clean": "rm -r _site/",
-    "build:dev": "npx @11ty/eleventy --serve --incremental",
+    "build:dev": "npx @11ty/eleventy --serve --quiet --incremental",
     "build:debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "build:prod": "npx @11ty/eleventy",
-    "watch": "npm-watch",
-    "predev": "run-p sass js",
-    "dev": "run-p build:dev watch",
-    "prod": "run-s sass:prod js:prod build:prod"
+    "dev": "npm run build:dev",
+    "prod": "npm run build:prod"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "esbuild": "^0.17.19",
-    "gulp-extname": "^0.2.2",
-    "node-sass": "^9.0.0",
-    "npm-run-all": "^4.1.5",
-    "npm-watch": "^0.11.0"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
