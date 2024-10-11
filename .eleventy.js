@@ -1,4 +1,8 @@
-module.exports = function(eleventyConfig) {
+const handlebarsPlugin = require("@11ty/eleventy-plugin-handlebars");
+
+module.exports = async function(eleventyConfig) {
+	eleventyConfig.addPlugin(handlebarsPlugin);
+
   // Add a filter using the Config API
   // eleventyConfig.addFilter( "myFilter", function() {});
 
