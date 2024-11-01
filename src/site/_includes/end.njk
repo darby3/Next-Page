@@ -1,0 +1,15 @@
+<script src="/assets/js/core/core.js" type="module"></script>
+
+{% if scripts %}
+  <!-- Custom scripts -->
+  {% for script in scripts %}
+    <script src="/assets/js/{{ script }}" type="module"></script>
+  {% endfor %}
+{% endif %}
+
+{% if lscripts %}
+  <!-- Custom local stylesheets -->
+  {% for script in lscripts %}
+    <script src="{% assetDepth %}/assets/{{ script }}" type="module"></script>
+  {% endfor %}
+{% endif %}

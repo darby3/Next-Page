@@ -1,15 +1,21 @@
 :root {
   --outer-margin: 1.5rem;
+
+  /* https://systemfontstack.com/ */
+
+  --system-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --system-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 html {
   font-size: 20px;
+  font-family: var(--system-sans);
 }
 
 body {
   margin: var(--outer-margin);
-  background-color: darkslategray;
-  color: lightcyan;
+  background-color: #323232;
+  color: #c0c0c0;
 
   display: flex;
   flex-flow: column nowrap;
