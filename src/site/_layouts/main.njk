@@ -1,0 +1,15 @@
+{% extends "./base.njk" %}
+
+{% block header %}
+  {% include "topbar.njk" %}
+{% endblock %}
+
+{% block content %}
+  <main>
+    {{ super() }}
+  </main>
+{% endblock %}
+
+{% block footer %}
+  {% include "bottombar.njk" %}
+{% endblock %}
