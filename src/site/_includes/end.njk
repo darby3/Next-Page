@@ -10,6 +10,6 @@
 {% if lscripts %}
   <!-- Custom local stylesheets -->
   {% for script in lscripts %}
-    <script src="../assets/{{ script }}" type="module"></script>
+    <script src="{% assetDepth %}/assets/{{ script }}" type="module"></script>
   {% endfor %}
 {% endif %}

@@ -21,6 +21,6 @@
 
 {% if lstyles %}
   {% for sheet in lstyles %}
-    <link rel="stylesheet" href="../assets/{{ sheet }}">
+    <link rel="stylesheet" href="{% assetDepth %}/assets/{{ sheet }}">
   {% endfor %}
 {% endif %}
